@@ -133,7 +133,7 @@ class WebsiteQASystem:
 # نحوه استفاده
 def start_sebsite_QA(text, linkWeb):
     # کلید API خود را از openrouter.ai دریافت کنید
-    API_KEY = "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"
+    API_KEY = "sk-or-v1-"
 
     # --- فولدر اصلی ---
     main_folder = "advanced_website_crawler"
