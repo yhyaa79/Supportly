@@ -1,0 +1,74 @@
+{
+  "base_url": "https://console.melipayamak.com/",
+  "total_pages": 4,
+  "total_urls_discovered": 4,
+  "crawled_at": "2025-11-03 18:47:28",
+  "pages": [
+    {
+      "url": "https://console.melipayamak.com/",
+      "title": "کنسول ملی پیامک",
+      "meta_description": "",
+      "headings": [
+        "ملی پیامک",
+        "کنسول",
+        "ورود"
+      ],
+      "content": "ورود نام کاربری رمزعبور ورود فراموشی رمزعبور کاربر جدید هستید؟ ثبت نام کنید ملی پیامک کنسول برای استفاده از کنسول احتیاج به ثبت نام در ملی پیامک دارید شماره تماس پشتیبانی 02163404 تعرفه‌های ملی پیامک © Melipayamak. v2.4.13",
+      "content_length": 222,
+      "links": [
+        "https://console.melipayamak.com/auth/register",
+        "https://console.melipayamak.com/auth/forgotPassword"
+      ],
+      "links_count": 2
+    },
+    {
+      "url": "https://console.melipayamak.com/auth/register",
+      "title": "کنسول ملی پیامک",
+      "meta_description": "",
+      "headings": [
+        "ملی پیامک",
+        "کنسول",
+        "ثبت نام"
+      ],
+      "content": "ثبت نام لطفا اطلاعات اشتراک Melipayamak خود را وارد کنید نام کاربری رمزعبور ارزیابی ورود به کنسول ملی پیامک کنسول برای استفاده از کنسول احتیاج به ثبت نام در ملی پیامک دارید شماره تماس پشتیبانی 02163404 تعرفه‌های ملی پیامک © Melipayamak. v2.4.13",
+      "content_length": 244,
+      "links": [
+        "https://console.melipayamak.com/auth/login"
+      ],
+      "links_count": 1
+    },
+    {
+      "url": "https://console.melipayamak.com/auth/forgotPassword",
+      "title": "کنسول ملی پیامک",
+      "meta_description": "",
+      "headings": [
+        "ملی پیامک",
+        "کنسول",
+        "فراموشی رمزعبور"
+      ],
+      "content": "فراموشی رمزعبور لطفا جهت دریافت رمز موقت موارد زیر را تکمیل کنید نام کاربری کنسول یا پنل پیامک شماره همراه ارسال رمز ورود به کنسول ملی پیامک کنسول برای استفاده از کنسول احتیاج به ثبت نام در ملی پیامک دارید شماره تماس پشتیبانی 02163404 تعرفه‌های ملی پیامک © Melipayamak. v2.4.13",
+      "content_length": 277,
+      "links": [
+        "https://console.melipayamak.com/auth/login"
+      ],
+      "links_count": 1
+    },
+    {
+      "url": "https://console.melipayamak.com/auth/login",
+      "title": "کنسول ملی پیامک",
+      "meta_description": "",
+      "headings": [
+        "ملی پیامک",
+        "کنسول",
+        "ورود"
+      ],
+      "content": "ورود نام کاربری رمزعبور ورود فراموشی رمزعبور کاربر جدید هستید؟ ثبت نام کنید ملی پیامک کنسول برای استفاده از کنسول احتیاج به ثبت نام در ملی پیامک دارید شماره تماس پشتیبانی 02163404 تعرفه‌های ملی پیامک © Melipayamak. v2.4.13",
+      "content_length": 222,
+      "links": [
+        "https://console.melipayamak.com/auth/register",
+        "https://console.melipayamak.com/auth/forgotPassword"
+      ],
+      "links_count": 2
+    }
+  ]
+}
