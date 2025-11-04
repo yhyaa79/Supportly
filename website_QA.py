@@ -1,7 +1,8 @@
 import json
 import requests
 from typing import List, Dict
-
+from dotenv import load_dotenv
+import os
 from urllib.parse import urljoin, urlparse
 import json
 
@@ -9,6 +10,8 @@ import json
 import os
 from urllib.parse import urlparse
 
+load_dotenv()                    # ← .env رو می‌خونه
+API_KEY = os.getenv("API_KEY")
 
 class WebsiteQASystem:
     def __init__(self, data_file: str, api_key: str, question: str = None):
@@ -73,17 +76,21 @@ class WebsiteQASystem:
         """پرسیدن سوال از سیستم"""
         # ایجاد کانتکست
         context = self.create_context(question)
-        
+        print("\n \n")
+        print(f"question::::: {question}")
+        print("\n \n")
+        print(f"context::::: {context}")
+        print("\n \n")
         # ساخت پیام برای مدل
         messages = [
             {
                 "role": "system",
                 "content": f"""تو یک دستیار هوشمند هستی که به سوالات کاربران درباره یک وبسایت پاسخ می‌دهی.
-اطلاعات زیر از وبسایت استخراج شده است. فقط بر اساس این اطلاعات پاسخ بده.
-اگر جوابی در اطلاعات نبود، به کاربر بگو که این اطلاعات در دسترس نیست.
-پاسخ‌هایت باید دقیق، مفید و به زبان فارسی باشد.
+                    اطلاعات زیر از وبسایت استخراج شده است. فقط بر اساس این اطلاعات پاسخ بده.
+                    اگر جوابی در اطلاعات نبود، به کاربر بگو که این اطلاعات در دسترس نیست.
+                    پاسخ‌هایت باید دقیق، مفید و به زبان فارسی باشد.
 
-{context}"""
+                    {context}"""
             },
             {
                 "role": "user",
@@ -132,8 +139,6 @@ class WebsiteQASystem:
 
 # نحوه استفاده
 def start_sebsite_QA(text, linkWeb):
-    # کلید API خود را از openrouter.ai دریافت کنید
-    API_KEY = "sk-or-v1-"
 
     # --- فولدر اصلی ---
     main_folder = "advanced_website_crawler"

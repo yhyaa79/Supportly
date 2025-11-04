@@ -277,50 +277,7 @@ export function supporterWeb(nameWeb, linkWeb) {
     document.head.appendChild(spinStyle);
 
 
-    /* 
-        // ارسال پیام
-    async function sendMessage() {
-        const text = userInput.value.trim();
-        if (!text) return;
 
-        addMessage(text, 'user');
-        userInput.value = '';
-
-        // نمایش "در حال تایپ..."
-        const typing = document.createElement('div');
-        typing.className = 'message ai typing';
-        typing.textContent = 'در حال تایپ...';
-        messagesContainer.appendChild(typing);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-
-        try {
-            const response = await fetch('/send_message', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ message: text , linkWeb: linkWeb}),  // ← فقط متن رو بفرست
-                credentials: 'include',
-            });
-
-            // حذف "در حال تایپ..."
-            typing.remove();
-
-            if (!response.ok) {
-                addMessage('خطا در ارتباط با سرور', 'ai error');
-                return;
-            }
-
-            const data = await response.json();
-            addMessage(data.reply, 'ai');
-
-        } catch (err) {
-            typing.remove();
-            addMessage('خطا در ارسال پیام', 'ai error');
-            console.error(err);
-        }
-    }
-     */
 
 
     async function toOpen() {

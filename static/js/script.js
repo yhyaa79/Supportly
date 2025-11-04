@@ -4,6 +4,6 @@ const fab = document.getElementById('myFab');
 
 fab.addEventListener('click', () => {
     fab.classList.toggle('spin');
-    webSupporter.supporteruser()
-    //webSupporter.supporterWeb('لووی', 'https://console.melipayamak.com/');
+    //webSupporter.supporteruser()
+    webSupporter.supporterWeb('لووی', 'https://loovi.ai/');
 });
