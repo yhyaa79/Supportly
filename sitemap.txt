@@ -1,204 +1,204 @@
 # نقشه سایت: https://loovi.ai/
-# تاریخ: 2025-11-04 15:23:23
+# تاریخ: 2025-11-05 00:42:30
 # تعداد صفحات: 50
 
 1. https://loovi.ai/
    عنوان: لووی | دسترسی به انواع مدل‌های هوش مصنوعی در یکجا
    تعداد لینک: 4
 
-2. https://loovi.ai/privacy.html
-   عنوان: 404 Not Found
-   تعداد لینک: 0
-
-3. https://loovi.ai/terms.html
-   عنوان: 404 Not Found
-   تعداد لینک: 0
-
-4. https://loovi.ai/blog
+2. https://loovi.ai/blog
    عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
    تعداد لینک: 30
 
-5. https://loovi.ai/tags/chatgpt
+3. https://loovi.ai/privacy.html
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-6. https://loovi.ai/blog/Capabilities-benefits-Qwen.html
-   عنوان: لووی | قابلیت‌ها و مزایای مدل Qwen در گفتگوهای هوشمند
-   تعداد لینک: 16
-
-7. https://loovi.ai/index-3.html
+4. https://loovi.ai/terms.html
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-8. https://loovi.ai/tags/ai-tools
+5. https://loovi.ai/index-5.html
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-9. https://loovi.ai/blog/GPT5-comparison-other-models.html
-   عنوان: لووی | GPT-5 و مقایسه با دیگر مدل های هوش مصنوعی پیشرفته
-   تعداد لینک: 16
-
-10. https://loovi.ai/blog/Lama-model-performance.html
-   عنوان: لووی | عملکرد و قابلیت‌های مدل Lama
-   تعداد لینک: 19
-
-11. https://loovi.ai/blog/All-about-Gemini.html
-   عنوان: لووی | همه چیز درباره مدل Gemini: معرفی و امکانات
-   تعداد لینک: 16
-
-12. https://loovi.ai/blog/impact-using-ai-everyday-work.html
-   عنوان: لووی | تاثیر استفاده از هوش مصنوعی در کارهای روزمره
-   تعداد لینک: 16
-
-13. https://loovi.ai/tags/content-generation
+6. https://loovi.ai/blog-single-2.html
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-14. https://loovi.ai/category.html
+7. https://loovi.ai/tags/claude
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-15. https://loovi.ai/blog/contact.html
-   عنوان: Katen - قالب وبلاگ و مجله خبری مینیمال
-   تعداد لینک: 10
-
-16. https://loovi.ai/blog/everything-about-gpt
-   عنوان: لووی | مدل ChatGPT: معرفی، قابلیت‌ها و مزایا
-   تعداد لینک: 19
-
-17. https://loovi.ai/blog/
-   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
-   تعداد لینک: 30
-
-18. https://loovi.ai/blog/future-artificial-intelligence.html
-   عنوان: لووی | آینده هوش مصنوعی: چالش‌ها و فرصت‌های مدل‌های متنی
-   تعداد لینک: 16
-
-19. https://loovi.ai/index-5.html
-   عنوان: 404 Not Found
-   تعداد لینک: 0
-
-20. https://loovi.ai/index-4.html
-   عنوان: 404 Not Found
-   تعداد لینک: 0
-
-21. https://loovi.ai/blog/about.html
-   عنوان: Katen - قالب وبلاگ و مجله خبری مینیمال
-   تعداد لینک: 10
-
-22. https://loovi.ai/blog/what-is-DeepSeek.html
-   عنوان: لووی | DeepSeek چیست؟ معرفی و مزایای استفاده
-   تعداد لینک: 19
-
-23. https://loovi.ai/blog-single-2.html
-   عنوان: 404 Not Found
-   تعداد لینک: 0
-
-24. https://loovi.ai/index-2.html
-   عنوان: 404 Not Found
-   تعداد لینک: 0
-
-25. https://loovi.ai/tags/claude
-   عنوان: 404 Not Found
-   تعداد لینک: 0
-
-26. https://loovi.ai/blog-single.html
-   عنوان: 404 Not Found
-   تعداد لینک: 0
-
-27. https://loovi.ai/blog/claude-model-review.html
-   عنوان: لووی | بررسی مدل Claude: امکانات و نقاط قوت
-   تعداد لینک: 19
-
-28. https://loovi.ai/tags/ai
-   عنوان: 404 Not Found
-   تعداد لینک: 0
-
-29. https://loovi.ai/blog/aruth-about-AI.html
+8. https://loovi.ai/blog/aruth-about-AI.html
    عنوان: لووی | حقیقت هوش مصنوعی: واقعیت در برابر تصورات غلط
    تعداد لینک: 16
 
-30. https://loovi.ai/blog/Introduction-grok
-   عنوان: لووی | آشنایی با مدل Grok: ویژگی‌ها و کاربردها
-   تعداد لینک: 19
-
-31. https://loovi.ai/tags/chatbots
+9. https://loovi.ai/tags/chatbots
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-32. https://loovi.ai/tags/grok
+10. https://loovi.ai/tags/ai
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-33. https://loovi.ai/blog/best_and_most_powerful_AI_2025.html
+11. https://loovi.ai/blog/Capabilities-benefits-Qwen.html
+   عنوان: لووی | قابلیت‌ها و مزایای مدل Qwen در گفتگوهای هوشمند
+   تعداد لینک: 16
+
+12. https://loovi.ai/tags/ai-tools
+   عنوان: 404 Not Found
+   تعداد لینک: 0
+
+13. https://loovi.ai/blog/future-artificial-intelligence.html
+   عنوان: لووی | آینده هوش مصنوعی: چالش‌ها و فرصت‌های مدل‌های متنی
+   تعداد لینک: 16
+
+14. https://loovi.ai/blog/impact-using-ai-everyday-work.html
+   عنوان: لووی | تاثیر استفاده از هوش مصنوعی در کارهای روزمره
+   تعداد لینک: 16
+
+15. https://loovi.ai/blog/best_and_most_powerful_AI_2025.html
    عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
    تعداد لینک: 29
 
-34. https://loovi.ai/tags/%D9%85%D8%AF%D9%84-qwen
+16. https://loovi.ai/blog/All-about-Gemini.html
+   عنوان: لووی | همه چیز درباره مدل Gemini: معرفی و امکانات
+   تعداد لینک: 16
+
+17. https://loovi.ai/blog-single.html
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-35. https://loovi.ai/blog/category.html
+18. https://loovi.ai/blog/Introduction-grok
+   عنوان: لووی | آشنایی با مدل Grok: ویژگی‌ها و کاربردها
+   تعداد لینک: 19
+
+19. https://loovi.ai/blog/everything-about-gpt
+   عنوان: لووی | مدل ChatGPT: معرفی، قابلیت‌ها و مزایا
+   تعداد لینک: 19
+
+20. https://loovi.ai/blog/Lama-model-performance.html
+   عنوان: لووی | عملکرد و قابلیت‌های مدل Lama
+   تعداد لینک: 19
+
+21. https://loovi.ai/tags/grok
+   عنوان: 404 Not Found
+   تعداد لینک: 0
+
+22. https://loovi.ai/blog/claude-model-review.html
+   عنوان: لووی | بررسی مدل Claude: امکانات و نقاط قوت
+   تعداد لینک: 19
+
+23. https://loovi.ai/blog/contact.html
    عنوان: Katen - قالب وبلاگ و مجله خبری مینیمال
    تعداد لینک: 10
 
-36. https://loovi.ai/tags/%D9%87%D9%88%D8%B4-%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C
+24. https://loovi.ai/blog/
+   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
+   تعداد لینک: 30
+
+25. https://loovi.ai/blog/about.html
+   عنوان: Katen - قالب وبلاگ و مجله خبری مینیمال
+   تعداد لینک: 10
+
+26. https://loovi.ai/index-2.html
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-37. https://loovi.ai/blog/blog-single.html
-   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
-   تعداد لینک: 30
-
-38. https://loovi.ai/blog/index.html
-   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
-   تعداد لینک: 30
-
-39. https://loovi.ai/tags/%D9%85%D8%AF%D9%84%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%BE%DB%8C%D8%B4%D8%B1%D9%81%D8%AA%D9%87
+27. https://loovi.ai/index-3.html
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-40. https://loovi.ai/blog/blog-single-2.html
-   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
-   تعداد لینک: 30
-
-41. https://loovi.ai/tags/qwen
+28. https://loovi.ai/index-4.html
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-42. https://loovi.ai/blog/index-5.html
-   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
-   تعداد لینک: 30
-
-43. https://loovi.ai/blog/index-2.html
-   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
-   تعداد لینک: 30
-
-44. https://loovi.ai/tags/%DB%8C%D8%A7%D8%AF%DA%AF%DB%8C%D8%B1%DB%8C-%D9%85%D8%A7%D8%B4%DB%8C%D9%86
+29. https://loovi.ai/tags/chatgpt
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-45. https://loovi.ai/blog/index-4.html
-   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
-   تعداد لینک: 30
+30. https://loovi.ai/blog/GPT5-comparison-other-models.html
+   عنوان: لووی | GPT-5 و مقایسه با دیگر مدل های هوش مصنوعی پیشرفته
+   تعداد لینک: 16
 
-46. https://loovi.ai/blog/index-3.html
-   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
-   تعداد لینک: 30
-
-47. https://loovi.ai/tags/gpt-5
+31. https://loovi.ai/tags/content-generation
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-48. https://loovi.ai/tags/%D9%85%D8%AF%D9%84-gpt-5
+32. https://loovi.ai/blog/what-is-DeepSeek.html
+   عنوان: لووی | DeepSeek چیست؟ معرفی و مزایای استفاده
+   تعداد لینک: 19
+
+33. https://loovi.ai/category.html
    عنوان: 404 Not Found
    تعداد لینک: 0
 
-49. https://loovi.ai/blog/everything-about-gpt.html
-   عنوان: لووی | مدل ChatGPT: معرفی، قابلیت‌ها و مزایا
-   تعداد لینک: 18
+34. https://loovi.ai/tags/%D9%85%D8%AF%D9%84%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%BE%DB%8C%D8%B4%D8%B1%D9%81%D8%AA%D9%87
+   عنوان: 404 Not Found
+   تعداد لینک: 0
 
-50. https://loovi.ai/tags/gemini
+35. https://loovi.ai/blog/index-5.html
+   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
+   تعداد لینک: 30
+
+36. https://loovi.ai/blog/index-3.html
+   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
+   تعداد لینک: 30
+
+37. https://loovi.ai/tags/%D8%AA%D8%B5%D9%88%D8%B1%D8%A7%D8%AA-%D8%BA%D9%84%D8%B7-%D9%87%D9%88%D8%B4-%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C
+   عنوان: 404 Not Found
+   تعداد لینک: 0
+
+38. https://loovi.ai/tags/%D9%88%D8%A7%D9%82%D8%B9%DB%8C%D8%AA-%D9%87%D9%88%D8%B4-%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C
+   عنوان: 404 Not Found
+   تعداد لینک: 0
+
+39. https://loovi.ai/blog/index.html
+   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
+   تعداد لینک: 30
+
+40. https://loovi.ai/blog/index-4.html
+   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
+   تعداد لینک: 30
+
+41. https://loovi.ai/tags/%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%87%D9%88%D8%B4-%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C
+   عنوان: 404 Not Found
+   تعداد لینک: 0
+
+42. https://loovi.ai/tags/%D9%87%D9%88%D8%B4-%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C
+   عنوان: 404 Not Found
+   تعداد لینک: 0
+
+43. https://loovi.ai/blog/category.html
+   عنوان: Katen - قالب وبلاگ و مجله خبری مینیمال
+   تعداد لینک: 10
+
+44. https://loovi.ai/blog/blog-single-2.html
+   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
+   تعداد لینک: 30
+
+45. https://loovi.ai/blog/blog-single.html
+   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
+   تعداد لینک: 30
+
+46. https://loovi.ai/blog/index-2.html
+   عنوان: لووی | دسترسی به مدل‌های پیشرفته هوش مصنوعی | Loovi.ai
+   تعداد لینک: 30
+
+47. https://loovi.ai/tags/qwen
+   عنوان: 404 Not Found
+   تعداد لینک: 0
+
+48. https://loovi.ai/tags/%DB%8C%D8%A7%D8%AF%DA%AF%DB%8C%D8%B1%DB%8C-%D9%85%D8%A7%D8%B4%DB%8C%D9%86
+   عنوان: 404 Not Found
+   تعداد لینک: 0
+
+49. https://loovi.ai/tags/%D9%85%D8%AF%D9%84-qwen
+   عنوان: 404 Not Found
+   تعداد لینک: 0
+
+50. https://loovi.ai/tags/%D8%A7%DB%8C%D9%86%D8%AF%D9%87-%D9%87%D9%88%D8%B4-%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C
    عنوان: 404 Not Found
    تعداد لینک: 0
 

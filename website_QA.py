@@ -14,10 +14,15 @@ load_dotenv()                    # ← .env رو می‌خونه
 API_KEY = os.getenv("API_KEY")
 
 class WebsiteQASystem:
-    def __init__(self, data_file: str, api_key: str, question: str = None):
+    def __init__(self, data_file: str, api_key: str, question: str = None, models='gpt-3.5-turbo'):
+
+        model_dic = {'gpt-3.5-turbo': 'openai/gpt-3.5-turbo', 'gemma-3-12b-it': 'google/gemma-3-12b-it', 'llama-3.1-70b-instruct': 'meta-llama/llama-3.1-70b-instruct'}
+
+        print(model_dic[models])
+
         self.api_key = api_key
         self.api_url = "https://openrouter.ai/api/v1/chat/completions"
-        self.model = "openai/gpt-3.5-turbo"
+        self.model = model_dic[models]
         
         with open(data_file, 'r', encoding='utf-8') as f:
             self.website_data = json.load(f)
@@ -138,7 +143,7 @@ class WebsiteQASystem:
 
 
 # نحوه استفاده
-def start_sebsite_QA(text, linkWeb):
+def start_sebsite_QA(text, linkWeb, models):
 
     # --- فولدر اصلی ---
     main_folder = "advanced_website_crawler"
@@ -155,7 +160,8 @@ def start_sebsite_QA(text, linkWeb):
     result = WebsiteQASystem(
         data_file=f'{folder_path}/website_data.json',
         api_key=API_KEY,
-        question= text
+        question= text,
+        models= models
     )
 
     return result.last_answer

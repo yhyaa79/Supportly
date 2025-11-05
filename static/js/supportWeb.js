@@ -120,14 +120,18 @@ export function supporteruser() {
         closeModal();
         supporterWeb(userInput, userInput);
     })
-
 }
 
 
 
 
 
-export function supporterWeb(nameWeb, linkWeb) {
+export function supporterWeb(nameWeb, linkWeb, model) {
+
+
+    const models = ['gpt-3.5-turbo', 'gemma-3-12b-it', 'llama-3.1-70b-instruct']
+
+
     // ایجاد استایل
     const style = document.createElement('style');
     style.textContent = `
@@ -332,7 +336,8 @@ export function supporterWeb(nameWeb, linkWeb) {
                 },
                 body: JSON.stringify({
                     text: text,
-                    linkWeb: linkWeb // ارسال لینک وبسایت
+                    linkWeb: linkWeb, // ارسال لینک وبسایت
+                    model: model
                 })
             });
 

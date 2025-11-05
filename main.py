@@ -29,13 +29,14 @@ app.add_middleware(
 class TextInputRun(BaseModel):
     text: str
     linkWeb: str
+    model: str
 
 class TextInputStr(BaseModel):
     linkWeb: str
 
 @app.post("/run")
 async def run_function(input: TextInputRun):
-    result = start_sebsite_QA(input.text, input.linkWeb)
+    result = start_sebsite_QA(input.text, input.linkWeb, input.model)
     
     # فقط مقدار answer رو برگردون
     if isinstance(result, dict) and 'answer' in result:
