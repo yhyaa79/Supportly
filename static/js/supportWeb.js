@@ -1,4 +1,4 @@
-export function supporteruser() {
+/* export function supporteruser() {
     const style = document.createElement('style');
     style.textContent = `
         .chat-overlay {
@@ -121,7 +121,7 @@ export function supporteruser() {
         supporterWeb(userInput, userInput);
     })
 }
-
+ */
 
 
 
@@ -286,17 +286,32 @@ export function supporterWeb(nameWeb, linkWeb, model) {
 
     async function toOpen() {
         try {
+            // نمایش لودینگ
+            loadingOverlay.classList.add('show');
+
             const response = await fetch('http://127.0.0.1:8000/str', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    linkWeb
-                })
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ linkWeb })
             });
 
             const data = await response.json();
+
+            // اگر پیام "صبر کنید" برگشت → الرت نشون بده + لودینگ بمونه
+            if (data.result && data.result.includes('صبر کنید')) {
+                addMessage(data.result, 'ai');  // یا alert(data.result)
+
+                // بعد از 2 ثانیه دوباره تلاش کن
+                setTimeout(() => {
+                    addMessage('در حال بارگذاری اطلاعات قبلی...', 'ai');
+                    toOpen();  // دوباره صدا بزن
+                }, 2000);
+
+                return;  // خروج موقت
+            }
+
+            // اگر کرال جدید بود یا اطلاعات آماده بود
+            addMessage('وبسایت با موفقیت بارگذاری شد!', 'ai');
 
             // حذف لودینگ
             loadingOverlay.classList.remove('show');
@@ -309,7 +324,6 @@ export function supporterWeb(nameWeb, linkWeb, model) {
             console.error(err);
         }
     }
-
 
 
     // ارسال پیام — نسخه نهایی و کاملاً هماهنگ با FastAPI
