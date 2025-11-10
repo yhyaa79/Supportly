@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware  # ← اینو اضافه کن
 from pydantic import BaseModel
-from website_crawler import start_website_crawler, setup_output_folder
+from website_crawler import start_website_crawler
 from website_QA import start_sebsite_QA
 
 """ server
@@ -44,20 +44,11 @@ async def run_function(input: TextInputRun):
     else:
         return {"result": str(result)}
 
-# یک بار کال میشود رد ذمان باذ شرن صفحه
+# یک بار کال میشود رد ذمان باذ شرن
 @app.post("/str")
 async def str_endpoint(input: TextInputStr):
-    folder_path = setup_output_folder(input.linkWeb)
-    
-    if folder_path is None:
-        # سایت قبلاً کرال شده → فقط پیام صبر بفرست
-        return {
-            "result": "در حال بارگذاری اطلاعات قبلی سایت... لطفاً چند ثانیه صبر کنید."
-        }
-    
-    # اگر فولدر جدید ساخته شد → کرال شروع می‌شه
     result = start_website_crawler(input.linkWeb)
-    return 
+    return {"result": str(result)}
 
 @app.get("/")
 def home():

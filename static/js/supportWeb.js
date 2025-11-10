@@ -1,129 +1,3 @@
-/* export function supporteruser() {
-    const style = document.createElement('style');
-    style.textContent = `
-        .chat-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.75); display: flex; justify-content: center;
-            align-items: center; z-index: 9999; opacity: 0; visibility: hidden;
-            transition: opacity 0.4s ease, visibility 0.4s ease;
-        }
-        .chat-overlay.show { opacity: 1; visibility: visible; }
-
-        .chat-modal {
-            background: #ffffff; width: 90%; max-width: 480px;
-            max-height: 700px; border-radius: 20px; overflow: hidden;
-            box-shadow: 0 25px 70px rgba(0,0,0,0.35);
-            display: flex; flex-direction: column;
-            transform: scale(0.7); transition: transform 0.4s ease;
-        }
-        .chat-overlay.show .chat-modal { transform: scale(1); }
-
-        .chat-header {
-            background: linear-gradient(135deg, #5e35b1, #7e57c2);
-            color: white; padding: 18px 20px; text-align: center;
-            position: relative; font-family: sans-serif;
-        }
-        .chat-header h2 {
-            margin: 0; font-size: 1.4rem; font-weight: 600;
-        }
-        .close-chat {
-            position: absolute; top: 50%; right: 20px;
-            transform: translateY(-50%); background: rgba(255,255,255,0.2);
-            border: none; color: white; width: 36px; height: 36px;
-            border-radius: 50%; font-size: 1.5rem; cursor: pointer;
-            backdrop-filter: blur(5px);
-        }
-        .close-chat:hover { background: rgba(255,255,255,0.3); }
-
-        .chat-messages {
-            flex: 1; padding: 20px; overflow-y: auto;
-            background: #f5f5f5; display: flex;
-            gap: 14px; font-family: sans-serif;
-        }
-        .message {
-            max-width: 80%; padding: 12px 16px; border-radius: 18px;
-            line-height: 1.5; word-wrap: break-word; font-size: 0.95rem;
-        }
-        .message.user {
-            align-self: flex-end; background: #5e35b1; color: white;
-            border-bottom-right-radius: 4px;
-        }
-        .message.ai {
-            align-self: flex-start; background: white; color: #333;
-            border: 1px solid #eee; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border-bottom-left-radius: 4px;
-        }
-        .typing {
-            font-style: italic; color: #888; font-size: 0.9rem;
-        }
-
-        .chat-input-area {
-            padding: 16px; background: white; border-top: 1px solid #eee;
-            display: flex; gap: 10px; align-items: center;
-        }
-        .chat-input {
-            flex: 1; padding: 14px 18px; border: 1px solid #ddd;
-            border-radius: 50px; outline: none; font-size: 1rem;
-            transition: border 0.3s;
-        }
-        .chat-input:focus {
-            border-color: #5e35b1; box-shadow: 0 0 0 3px rgba(94,53,177,0.15);
-        }
-        .send-btn {
-            background: #5e35b1; color: white; border: none;
-            width: 46px; height: 46px; border-radius: 50%;
-            cursor: pointer; font-size: 1.3rem;
-            display: flex; align-items: center; justify-content: center;
-            transition: 0.3s;
-        }
-        .send-btn:hover { background: #4a278c; transform: scale(1.1); }
-        .send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-    `
-    document.head.appendChild(style);
-
-    // ایجاد مودال
-    const overlay = document.createElement('div');
-    overlay.className = 'chat-overlay';
-    overlay.innerHTML = `
-        <div class="chat-modal">
-            <div class="chat-header">
-                <h3>ادرس سایت مورد نظر را وارد کنید</h3>
-                <button class="close-chat">×</button>
-            </div>
-            <div class="chat-messages" id="messages">
-                <input type="text" class="chat-input" placeholder="https://..." id="userInput">
-                <button class="send-btn" id="sendBtn">➤</button>
-            </div>
-        </div>
-    `
-    document.body.appendChild(overlay);
-
-    // نمایش مودال
-    setTimeout(() => overlay.classList.add('show'), 100);
-
-    const closeBtn = overlay.querySelector('.close-chat');
-    const userInput = overlay.querySelector('#userInput');
-    const sendBtn = overlay.querySelector('#sendBtn');
-
-    // بستن مودال
-    function closeModal() {
-        overlay.classList.remove('show');
-        setTimeout(() => overlay.remove(), 400);
-    }
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', e => {
-        if (e.target === overlay) closeModal();
-    });
-
-    sendBtn.addEventListener('click', () => {
-        closeModal();
-        supporterWeb(userInput, userInput);
-    })
-}
- */
-
-
 
 
 export function supporterWeb(nameWeb, linkWeb, model) {
@@ -286,32 +160,17 @@ export function supporterWeb(nameWeb, linkWeb, model) {
 
     async function toOpen() {
         try {
-            // نمایش لودینگ
-            loadingOverlay.classList.add('show');
-
             const response = await fetch('http://127.0.0.1:8000/str', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ linkWeb })
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    linkWeb
+                })
             });
 
             const data = await response.json();
-
-            // اگر پیام "صبر کنید" برگشت → الرت نشون بده + لودینگ بمونه
-            if (data.result && data.result.includes('صبر کنید')) {
-                addMessage(data.result, 'ai');  // یا alert(data.result)
-
-                // بعد از 2 ثانیه دوباره تلاش کن
-                setTimeout(() => {
-                    addMessage('در حال بارگذاری اطلاعات قبلی...', 'ai');
-                    toOpen();  // دوباره صدا بزن
-                }, 2000);
-
-                return;  // خروج موقت
-            }
-
-            // اگر کرال جدید بود یا اطلاعات آماده بود
-            addMessage('وبسایت با موفقیت بارگذاری شد!', 'ai');
 
             // حذف لودینگ
             loadingOverlay.classList.remove('show');
@@ -324,6 +183,7 @@ export function supporterWeb(nameWeb, linkWeb, model) {
             console.error(err);
         }
     }
+
 
 
     // ارسال پیام — نسخه نهایی و کاملاً هماهنگ با FastAPI
