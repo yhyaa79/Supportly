@@ -1,12 +1,17 @@
-
-
 export function supporterWeb(nameWeb, linkWeb, model) {
 
+    /*     
+    The first time you use this library, you must wait a few minutes 
+    after logging in for the sitemap to be downloaded and saved on the server, 
+    and the next time it will be ready to ask questions without delay.
+    */
 
-    const models = ['gpt-3.5-turbo', 'gemma-3-12b-it', 'llama-3.1-70b-instruct']
+    // nameWeb: your website name 
+    // linkWeb: your website link 
+    // model:'gpt-3.5-turbo', 'gemma-3-12b-it', 'llama-3.1-70b-instruct' ...
 
 
-    // ایجاد استایل
+    // Create style
     const style = document.createElement('style');
     style.textContent = `
         .chat-overlay {
@@ -89,7 +94,7 @@ export function supporterWeb(nameWeb, linkWeb, model) {
     `;
     document.head.appendChild(style);
 
-    // ایجاد مودال
+    // Create modal
     const overlay = document.createElement('div');
     overlay.className = 'chat-overlay';
     overlay.innerHTML = `
@@ -100,27 +105,27 @@ export function supporterWeb(nameWeb, linkWeb, model) {
             </div>
             <div class="chat-messages" id="messages">
                 <div class="message ai">
-                    سلام! چطور می‌تونم بهت کمک کنم؟ 😊
+                    Hello! How can I help you? 😊
                 </div>
             </div>
             <div class="chat-input-area">
-                <input type="text" class="chat-input" placeholder="پیام خود را بنویسید..." id="userInput">
+                <input type="text" class="chat-input" placeholder="Write your message..." id="userInput">
                 <button class="send-btn" id="sendBtn">➤</button>
             </div>
         </div>
     `;
     document.body.appendChild(overlay);
 
-    // نمایش مودال
+    // modal display
     setTimeout(() => overlay.classList.add('show'), 100);
 
-    // عناصر
+    // Elements
     const messagesContainer = overlay.querySelector('#messages');
     const userInput = overlay.querySelector('#userInput');
     const sendBtn = overlay.querySelector('#sendBtn');
     const closeBtn = overlay.querySelector('.close-chat');
 
-    // تابع افزودن پیام
+    // Add message function
     function addMessage(text, type) {
         const msg = document.createElement('div');
         msg.className = `message ${type}`;
@@ -129,35 +134,7 @@ export function supporterWeb(nameWeb, linkWeb, model) {
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
     }
 
-
-    const loadingOverlay = document.createElement('div');
-    loadingOverlay.className = 'chat-overlay';
-    loadingOverlay.innerHTML = `
-    <div style="
-        background:#fff; padding:30px 50px; border-radius:20px;
-        box-shadow:0 20px 60px rgba(0,0,0,0.3);
-        text-align:center; font-family:sans-serif;
-    ">
-        <div style="
-            width:48px; height:48px; border:5px solid #f3f3f3;
-            border-top:5px solid #5e35b1; border-radius:50%;
-            animation:spin 1s linear infinite; margin:0 auto 15px;
-        "></div>
-        <p style="margin:0; color:#333; font-size:1.1rem;">در حال بارگذاری اطلاعات سایت…</p>
-    </div>
-`;
-    document.body.appendChild(loadingOverlay);
-    setTimeout(() => loadingOverlay.classList.add('show'), 50);
-
-    // ۲. استایل چرخش
-    const spinStyle = document.createElement('style');
-    spinStyle.textContent = `@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}`;
-    document.head.appendChild(spinStyle);
-
-
-
-
-
+    // Send a request to the API to check and create a sitemap on the server
     async function toOpen() {
         try {
             const response = await fetch('http://127.0.0.1:8000/str', {
@@ -172,37 +149,30 @@ export function supporterWeb(nameWeb, linkWeb, model) {
 
             const data = await response.json();
 
-            // حذف لودینگ
-            loadingOverlay.classList.remove('show');
-            setTimeout(() => loadingOverlay.remove(), 400);
-
         } catch (err) {
-            loadingOverlay.classList.remove('show');
-            setTimeout(() => loadingOverlay.remove(), 400);
-            addMessage('اتصال به سرور قطع شد', 'ai');
+            addMessage('The connection to the server was lost.', 'ai');
             console.error(err);
         }
     }
 
 
 
-    // ارسال پیام — نسخه نهایی و کاملاً هماهنگ با FastAPI
+    // Send message to api
     async function sendMessage() {
         const text = userInput.value.trim();
         if (!text) return;
 
-        // نمایش پیام کاربر
         addMessage(text, 'user');
         userInput.value = '';
 
-        // نمایش "در حال تایپ..."
         const typing = document.createElement('div');
         typing.className = 'message ai typing';
-        typing.textContent = 'در حال تایپ...';
+        typing.textContent = 'Typing...';
         messagesContainer.appendChild(typing);
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
         try {
+            // Send user messages and receive bot messages from API
             const response = await fetch('http://127.0.0.1:8000/run', {
                 method: 'POST',
                 headers: {
@@ -210,12 +180,11 @@ export function supporterWeb(nameWeb, linkWeb, model) {
                 },
                 body: JSON.stringify({
                     text: text,
-                    linkWeb: linkWeb, // ارسال لینک وبسایت
+                    linkWeb: linkWeb,
                     model: model
                 })
             });
 
-            // حذف "در حال تایپ"
             typing.remove();
 
             if (!response.ok) {
@@ -226,22 +195,19 @@ export function supporterWeb(nameWeb, linkWeb, model) {
 
             const data = await response.json();
 
-            
-            // اگر API ما فقط { result: "..." } برمی‌گردونه
             if (data.result) {
                 addMessage(data.result, 'ai');
             } else {
-                addMessage('پاسخی دریافت نشد!', 'ai');
+                addMessage('No response received!', 'ai');
             }
 
         } catch (err) {
             typing.remove();
-            addMessage('اتصال به سرور قطع شد', 'ai');
-            console.error('خطای شبکه:', err);
+            addMessage('The connection to the server was lost.', 'ai');
+            console.error('Network error:', err);
         }
     }
 
-    // رویدادها
 
     toOpen()
 
@@ -250,7 +216,7 @@ export function supporterWeb(nameWeb, linkWeb, model) {
         if (e.key === 'Enter') sendMessage();
     });
 
-    // بستن مودال
+    // Close modal
     function closeModal() {
         overlay.classList.remove('show');
         setTimeout(() => overlay.remove(), 400);
@@ -260,6 +226,6 @@ export function supporterWeb(nameWeb, linkWeb, model) {
         if (e.target === overlay) closeModal();
     });
 
-    // فوکوس خودکار روی اینپوت
+    // Autofocus on input
     setTimeout(() => userInput.focus(), 500);
 }

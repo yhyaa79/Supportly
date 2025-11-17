@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware  # ← اینو اضافه کن
+from fastapi.middleware.cors import CORSMiddleware  
 from pydantic import BaseModel
 from website_crawler import start_website_crawler
 from website_QA import start_sebsite_QA
@@ -16,10 +16,9 @@ uvicorn main:app --reload
 """
 app = FastAPI()
 
-# ==== CORS: اجازه بده مرورگر از هرجا بفرسته ====
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # تو تولید بذار ["http://127.0.0.1:5500"]
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -38,13 +37,11 @@ class TextInputStr(BaseModel):
 async def run_function(input: TextInputRun):
     result = start_sebsite_QA(input.text, input.linkWeb, input.model)
     
-    # فقط مقدار answer رو برگردون
     if isinstance(result, dict) and 'answer' in result:
         return {"result": result['answer']}
     else:
         return {"result": str(result)}
 
-# یک بار کال میشود رد ذمان باذ شرن
 @app.post("/str")
 async def str_endpoint(input: TextInputStr):
     result = start_website_crawler(input.linkWeb)
@@ -53,12 +50,6 @@ async def str_endpoint(input: TextInputStr):
 @app.get("/")
 def home():
     return {"message": "API آماده است!"}
-
-
-
-def my_python_function(text: str, linkWeb: str) -> str:
-    return f"سلام از {linkWeb}! پیام شما: {text.upper()} بود."
-
 
 
 

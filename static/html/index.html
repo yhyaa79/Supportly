@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>دکمه شناور</title>
+  <title>Floating button</title>
   <style>
-    /* استایل دکمه شناور */
     .fab {
-      position: fixed;           /* ثابت روی صفحه */
-      bottom: 30px;              /* فاصله از پایین */
-      left: 30px;                /* فاصله از چپ (چون dir=rtl) */
+      position: fixed;      
+      bottom: 30px;       
+      left: 30px;          
       width: 56px;
       height: 56px;
-      background: #007bff;       /* رنگ آبی */
+      background: #007bff;   
       color: white;
-      border-radius: 50%;        /* گرد */
+      border-radius: 50%;   
       display: flex;
       align-items: center;
       justify-content: center;
@@ -22,16 +21,14 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       cursor: pointer;
       transition: all 0.3s ease;
-      z-index: 1000;             /* بالای بقیه عناصر */
+      z-index: 1000;          
     }
 
-    /* افکت هاور */
     .fab:hover {
       transform: scale(1.1);
       background: #0056b3;
     }
 
-    /* انیمیشن چرخش */
     .fab.spin {
       animation: spin 0.6s ease;
     }
@@ -44,12 +41,8 @@
 </head>
 <body>
 
-  <h1>به صفحه خوش آمدید!</h1>
-  <p>متن طولانی برای تست اسکرول…</p>
-  <!-- یه مقدار محتوای زیاد برای اسکرول -->
   <div style="height:2000px;"></div>
 
-  <!-- دکمه شناور -->
   <div class="fab" id="myFab">✚</div>
 
 <script type="module" src="../js/script.js"></script>
